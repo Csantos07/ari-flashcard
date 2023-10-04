@@ -56,9 +56,14 @@ What are possible components we may need
   - Create Card/Deck Forms
 
 ## Goals
+At this point my first goal is to render the home page.
+Have all the decks displayed.
+Use the list util?
+
+Create a route to the home page?
 
 ### Queue
 - Home
 - Decks
-- Create 
+- Create
 - Study
