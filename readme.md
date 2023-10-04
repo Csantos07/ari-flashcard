@@ -23,9 +23,15 @@ The Github Repo:
 ### React routes
 ---
 `http://localhost:3000/` --> Home
+
 `http://localhost:3000/decks/:deckId` -->  Deck
+
 `http://localhost:3000/decks/new` --> Create Deck
+
 `http://localhost:3000/decks/:deckId/edit` -->  Edit Deck
+
 `http://localhost:3000/decks/:deckId/study` --> Study Deck
+
 `http://localhost:3000/decks/:deckId/cards/new` -->  Add Card
+
 `http://localhost:3000/decks/:deckId/cards/:cardId/edit` -->  Edit Card
