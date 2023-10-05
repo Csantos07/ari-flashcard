@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "../Home";
+import CreateDeckForm from "../Deck/CreateDeckForm";
 import { listDecks } from "../utils/api";
 import { Route } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
@@ -34,6 +35,9 @@ function Layout() {
         {/*   - create deck button */}
         {/*   - show existing decks */}
         <Switch>
+          <Route exact path="/decks/new">
+            <CreateDeckForm />
+          </Route>
           <Route exact path="/">
             {decks && < Home decks={decks} />}
           </Route>

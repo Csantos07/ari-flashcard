@@ -60,6 +60,12 @@ At this point my next goal is to be able to create a deck...
 
 When i click on create deck
 - I should be routed to a form to create a deck
+- I should be able to fill in the contents.
+- Then click submit
+- I should see that I have a new deck?
+- What will happen after i click submit?
+- What will be my view?
+
 
 ```CREATE DECK
 Name:
@@ -89,6 +95,7 @@ I'm debating between that and ...
 - Study
 
 # History/ChangeLog
+I created a branch from carlo-implement-home
 - [x] Started Routes so we could do conditional rendering
 - [x] Create a route to the home page?
 - [x] First version of home page finished
