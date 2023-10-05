@@ -56,14 +56,43 @@ What are possible components we may need
   - Create Card/Deck Forms
 
 ## Goals
-At this point my first goal is to render the home page.
-Have all the decks displayed.
-Use the list util?
+At this point my next goal is to be able to create a deck...
 
-Create a route to the home page?
+When i click on create deck
+- I should be routed to a form to create a deck
+
+```CREATE DECK
+Name:
+----------
+Deck Name |
+----------
+
+
+Description:
+--------------------
+Brief Description   |
+--------------------
+
+----------------
+Cancel | Submit |
+----------------
+```
+
+I'm debating between that and ...
+- study
+- view
 
 ### Queue
 - Home
 - Decks
 - Create
 - Study
+
+# History/ChangeLog
+- [x] Started Routes so we could do conditional rendering
+- [x] Create a route to the home page?
+- [x] First version of home page finished
+- [x] Have all the decks displayed.
+- [x] At this point my first goal is to render the home page.
+- [x] Use the list util?
+

@@ -3,6 +3,8 @@ import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "../Home";
 import { listDecks } from "../utils/api";
+import { Route } from "react-router-dom";
+import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function Layout() {
@@ -31,8 +33,14 @@ function Layout() {
         {/* The home component should have: */}
         {/*   - create deck button */}
         {/*   - show existing decks */}
-        <Home decks={decks} />
-        <NotFound />
+        <Switch>
+          <Route exact path="/">
+            {decks && < Home decks={decks} />}
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
       </div>
     </>
   );
