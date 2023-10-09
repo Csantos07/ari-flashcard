@@ -16,7 +16,6 @@ function Layout() {
       let response = await listDecks();
 
       setDecks(response);
-      console.log(response);
     }
 
     fetchDecks();
@@ -35,11 +34,11 @@ function Layout() {
         {/*   - create deck button */}
         {/*   - show existing decks */}
         <Switch>
-          <Route exact path="/decks/new">
-            <CreateDeckForm />
-          </Route>
           <Route exact path="/">
             {decks && < Home decks={decks} />}
+          </Route>
+          <Route exact path="/decks/new">
+            <CreateDeckForm />
           </Route>
           <Route>
             <NotFound />

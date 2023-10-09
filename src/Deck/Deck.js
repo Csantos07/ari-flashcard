@@ -6,7 +6,7 @@ function Deck({ deck }) {
       <section className='card p-4'>
         <section className='d-flex justify-content-between'>
           <h3>{deck.name}</h3>
-          <span>{deck.cards.length} Cards</span>
+          <span>{deck.cards.length} cards</span>
         </section>
 
         <p>{deck.description}</p>

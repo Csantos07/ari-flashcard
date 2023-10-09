@@ -58,7 +58,7 @@ What are possible components we may need
 ## Goals
 At this point my next goal is to be able to create a deck...
 
-When i click on create deck
+When I click on create deck
 - I should be routed to a form to create a deck
 - I should be able to fill in the contents.
 - Then click submit
@@ -66,6 +66,20 @@ When i click on create deck
 - What will happen after i click submit?
 - What will be my view?
 
+
+At this point I am able to create a new card.
+- It still needs to present something new after clicking on it.
+- The related files are...
+* CreateDeckForm.js
+* Deck.js
+* Home/index.js (button to create new deck)
+* Layout/index.js (creates the route)
+----------------------------------------------------
+--I'm in an expiremental branch so just get it to work...
+don't worry about best practices
+
+I am routing when clicking the button
+Form next
 
 ```CREATE DECK
 Name:
