@@ -5,7 +5,7 @@ import Home from "../Home";
 import CreateDeckForm from "../Deck/CreateDeckForm";
 import { listDecks } from "../utils/api";
 import { Route } from "react-router-dom";
-import { Switch, useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { Switch, useLocation } from "react-router-dom";
 
 
 function Layout() {
