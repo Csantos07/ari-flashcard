@@ -5,11 +5,12 @@ import Home from "../Home";
 import CreateDeckForm from "../Deck/CreateDeckForm";
 import { listDecks } from "../utils/api";
 import { Route } from "react-router-dom";
-import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { Switch, useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function Layout() {
   const [decks, setDecks] = useState(null);
+  const location = useLocation();
 
   useEffect(function () {
     async function fetchDecks() {
@@ -18,21 +19,17 @@ function Layout() {
       setDecks(response);
     }
 
-    fetchDecks();
-  }, []);
+    // Fetch decks only if the route is the home page
+    if (location.pathname === '/') {
+      fetchDecks();
+    }
+  }, [location.pathname]);
 
 
   return (
     <>
       <Header />
       <div className="container">
-        {/* TODO: Implement the screen starting here */}
-
-        {/* We will eventually use react router to render our pages here */}
-        {/* For the time being lets get started with Rendering a home component */}
-        {/* The home component should have: */}
-        {/*   - create deck button */}
-        {/*   - show existing decks */}
         <Switch>
           <Route exact path="/">
             {decks && < Home decks={decks} />}

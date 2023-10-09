@@ -67,7 +67,14 @@ When I click on create deck
 - What will be my view?
 
 
-At this point I am able to create a new card.
+The Home page now displays the new content on redirect next stage is the delete button.
+
+-----------------------------------------------------
+--At this point I am creating new cards and routing back to the home page
+but the home page does not display the new deck.
+
+-----------------------------------------------------
+--At this point I am able to create a new card.
 - It still needs to present something new after clicking on it.
 - The related files are...
 * CreateDeckForm.js

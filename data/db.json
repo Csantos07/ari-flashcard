@@ -11,15 +11,9 @@
       "id": 2
     },
     {
-      "name": "React Router",
-      "description": "Learn about react router: Router, Switch, LinkTo, History...",
-      "deckName": "R",
-      "id": 3
-    },
-    {
       "name": "Express",
-      "description": "How to route.. What to return",
-      "id": 4
+      "description": "Servers, Routing, Responses, HTTP requests",
+      "id": 3
     }
   ],
   "cards": [

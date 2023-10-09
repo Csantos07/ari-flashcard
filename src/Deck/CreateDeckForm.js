@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createDeck } from '../utils/api';
+import { useHistory } from 'react-router-dom';
 
 function CreateDeckForm() {
 
@@ -7,6 +8,8 @@ function CreateDeckForm() {
     name: '',
     description: ''
   });
+
+  const history = useHistory();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -20,10 +23,12 @@ function CreateDeckForm() {
     event.preventDefault();
     console.log('Form submitted:', formData);
     createDeck(formData);
+    history.push('/');
   }
 
   return (
     <>
+      <h2>Create Deck</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor='firstName'>Name:</label>
         <input
