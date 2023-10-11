@@ -64,23 +64,11 @@ Currently I am setting the url as a dependency on my use effect for fetching dec
 
 View
 Study
-Con
+Confirm!
 
-At this point I can delete and rerender the page with the updated delete..
-I beleive I should be able to check in my changes..
 
-----------------------------------------------------------------
-At this point I am able to delete but I need to rerender the page.
-
-At this point my next goal is to be able to
-delete a deck...
-
-When I click on delete deck
-- I should be able to make an http request to delete a deck
-- I assume the param i need to pass is the deck
-- Then I should reroute back to the home page
-- I should see that deck be gone
-
+I should no longer be using the useEffect with a dependency on the url..
+I can rely on the state of the deck to let me know when it should be rerendered 😀
 
 
 ### Queue
@@ -90,7 +78,8 @@ When I click on delete deck
 - Study
 
 # History/ChangeLog
-I created a branch from carlo-implement-
+I created a branch from carlo-implement-delete-deck-experimental
+- [x] Delete Deck
 - [x] Create Deck
 - [x] Started Routes so we could do conditional rendering
 - [x] Create a route to the home page?
@@ -99,3 +88,35 @@ I created a branch from carlo-implement-
 - [x] At this point my first goal is to render the home page.
 - [x] Use the list util?
 
+
+-----
+Someting To Look Back On
+```js
+const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      console.log('Form submitted:', formData);
+
+      let newDeck = await createDeck(formData);
+      setDecks((prevDecks) => [...prevDecks, newDeck]);
+
+      history.push('/');
+    } catch (error) {
+      console.error('Error creating deck:', error);
+      // Handle the error as needed
+    }
+  };
+
+```
+
+VS:
+
+```js
+ const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Form submitted:', formData);
+    createDeck(formData);
+    history.push('/');
+  }
+```

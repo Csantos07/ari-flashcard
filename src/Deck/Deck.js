@@ -19,7 +19,7 @@ function Deck({ deck, setDecks }) {
       <section className='card p-4'>
         <section className='d-flex justify-content-between'>
           <h3>{deck.name}</h3>
-          <span>{deck.cards.length} cards</span>
+          <span>{deck.cards ? `${deck.cards.length} cards` : '0 cards'}</span>
         </section>
 
         <p>{deck.description}</p>

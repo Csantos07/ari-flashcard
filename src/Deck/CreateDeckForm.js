@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createDeck } from '../utils/api';
 import { useHistory } from 'react-router-dom';
 
-function CreateDeckForm() {
+function CreateDeckForm({ setDecks }) {
 
   const [formData, setFormData] = useState({
     name: '',
@@ -19,13 +19,21 @@ function CreateDeckForm() {
     })
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Form submitted:', formData);
-    createDeck(formData);
-    history.push('/');
-  }
 
+    try {
+      console.log('Form submitted:', formData);
+
+      let newDeck = await createDeck(formData);
+      setDecks((prevDecks) => [...prevDecks, newDeck]);
+
+      history.push('/');
+    } catch (error) {
+      console.error('Error creating deck:', error);
+      // Handle the error as needed
+    }
+  };
   return (
     <>
       <h2>Create Deck</h2>
