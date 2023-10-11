@@ -9,16 +9,6 @@
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
-    },
-    {
-      "name": "Express",
-      "description": "Servers, Routing, Responses, HTTP requests",
-      "id": 3
-    },
-    {
-      "name": "Delete a deck ",
-      "description": "click the button route to an action or url ... nice",
-      "id": 4
     }
   ],
   "cards": [

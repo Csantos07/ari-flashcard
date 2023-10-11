@@ -32,7 +32,7 @@ function Layout() {
       <div className="container">
         <Switch>
           <Route exact path="/">
-            {decks && < Home decks={decks} />}
+            {decks && < Home decks={decks} setDecks={setDecks} />}
           </Route>
           <Route exact path="/decks/new">
             <CreateDeckForm />

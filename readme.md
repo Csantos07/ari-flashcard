@@ -47,67 +47,41 @@ Qualified Assessment:
 
 # Development
 What are possible components we may need
-  - Home
-  - Decklist/Decks
-  - Deck
-  - StudyDeck Component
-  - Cardlist/Cards
-  - Card
-  - Create Card/Deck Forms
+  - Home                  [Created]
+  - Decklist/Decks        [Created]
+  - Deck                  [Created]
+  - StudyDeck Component   [NOTCreated]
+  - Cardlist/Cards        [Created]
+  - Card                  [Created]
+  - Create Card/Deck Forms[CreatedOneOfTwo]
 
 ## Goals
-At this point my next goal is to be able to create a deck...
 
-When I click on create deck
-- I should be routed to a form to create a deck
-- I should be able to fill in the contents.
-- Then click submit
-- I should see that I have a new deck?
-- What will happen after i click submit?
-- What will be my view?
+Next Goals?...
+I want to update the create to use the same method of passing down the setDecks() useState method.
 
+Currently I am setting the url as a dependency on my use effect for fetching decks
 
-The Home page now displays the new content on redirect next stage is the delete button.
+View
+Study
+Con
 
------------------------------------------------------
---At this point I am creating new cards and routing back to the home page
-but the home page does not display the new deck.
+At this point I can delete and rerender the page with the updated delete..
+I beleive I should be able to check in my changes..
 
------------------------------------------------------
---At this point I am able to create a new card.
-- It still needs to present something new after clicking on it.
-- The related files are...
-* CreateDeckForm.js
-* Deck.js
-* Home/index.js (button to create new deck)
-* Layout/index.js (creates the route)
-----------------------------------------------------
---I'm in an expiremental branch so just get it to work...
-don't worry about best practices
+----------------------------------------------------------------
+At this point I am able to delete but I need to rerender the page.
 
-I am routing when clicking the button
-Form next
+At this point my next goal is to be able to
+delete a deck...
 
-```CREATE DECK
-Name:
-----------
-Deck Name |
-----------
+When I click on delete deck
+- I should be able to make an http request to delete a deck
+- I assume the param i need to pass is the deck
+- Then I should reroute back to the home page
+- I should see that deck be gone
 
 
-Description:
---------------------
-Brief Description   |
---------------------
-
-----------------
-Cancel | Submit |
-----------------
-```
-
-I'm debating between that and ...
-- study
-- view
 
 ### Queue
 - Home
@@ -116,7 +90,8 @@ I'm debating between that and ...
 - Study
 
 # History/ChangeLog
-I created a branch from carlo-implement-home
+I created a branch from carlo-implement-
+- [x] Create Deck
 - [x] Started Routes so we could do conditional rendering
 - [x] Create a route to the home page?
 - [x] First version of home page finished

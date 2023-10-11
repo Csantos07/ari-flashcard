@@ -1,6 +1,19 @@
 import React from 'react';
+import { deleteDeck } from '../utils/api';
+import { useHistory } from 'react-router-dom/';
 
-function Deck({ deck }) {
+function Deck({ deck, setDecks }) {
+  const history = useHistory();
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    deleteDeck(deck.id);
+    setDecks((currentDecks) =>
+      currentDecks.filter((currentDeck) => currentDeck.id !== deck.id)
+    );
+
+    history.push('/');
+  }
   return (
     <>
       <section className='card p-4'>
@@ -17,7 +30,7 @@ function Deck({ deck }) {
             <button className="btn btn-secondary">Study</button>
           </section>
           <section className='right-section'>
-            <button className="btn btn-danger mb-4">Delete</button>
+            <button onClick={handleClick} className="btn btn-danger mb-4">Delete</button>
           </section>
         </section>
       </section>
