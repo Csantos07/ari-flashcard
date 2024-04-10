@@ -58,17 +58,13 @@ What are possible components we may need
 ## Goals
 
 Next Goals?...
-I want to update the create to use the same method of passing down the setDecks() useState method.
-
-Currently I am setting the url as a dependency on my use effect for fetching decks
+Tests up to date?
 
 View
 Study
 Confirm!
 
 
-I should no longer be using the useEffect with a dependency on the url..
-I can rely on the state of the deck to let me know when it should be rerendered 😀
 
 
 ### Queue
@@ -79,6 +75,7 @@ I can rely on the state of the deck to let me know when it should be rerendered 
 
 # History/ChangeLog
 I created a branch from carlo-implement-delete-deck-experimental
+- [x] Refactored Create Deck to pass setDeck as a prop.
 - [x] Delete Deck
 - [x] Create Deck
 - [x] Started Routes so we could do conditional rendering

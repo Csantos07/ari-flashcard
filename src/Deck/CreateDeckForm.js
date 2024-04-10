@@ -50,7 +50,7 @@ function CreateDeckForm({ setDecks }) {
         />
         <br />
         <label htmlFor='Description'>Description:</label>
-        <input
+        <textarea
           type='text'
           id='description'
           name='description'
@@ -60,7 +60,7 @@ function CreateDeckForm({ setDecks }) {
           required
         />
         <br />
-        <input type="submit" value="Submit" />
+        <button type="submit" value="Submit"> Submit</button>
       </form>
     </>
   );
