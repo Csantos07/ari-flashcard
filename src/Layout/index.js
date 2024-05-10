@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import { listDecks } from "../utils/api";
+import Decks from "../Deck/Decks";
+import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import Study from "../Study";
 
 function Layout() {
-
-  // console.log(listDecks());
   const [decks, setDecks] = useState([]);
 
   useEffect(() => {
@@ -17,29 +18,27 @@ function Layout() {
 
   }, [])
 
-  if (decks.length > 0) {
-    return (
-      <>
-        <Header />
-        <div className="container">
-          {/* TODO: Implement the screen starting here */}
-          <button>Create Deck</button>
-
-          <section className="card">
-            <h4>{decks[0].name}</h4>
-            <p>lorem ispusmlkjdslkajdfl;kja;lsdkfj;lajdl;f</p>
-            <button className="bg-secondary">View</button>
-            <button className="bg-primary">Study</button>
-            <button className="bg-danger">Delete</button>
-          </section>
-          <NotFound />
-        </div>
-      </>
-    );
-  } else {
-    return null;
-  }
-
+  return (
+    <>
+      <Header />
+      <div className="container">
+        {/* TODO: Implement the screen starting here */}
+        <Switch>
+          <Route exact path="/">
+            <button>Create Deck</button>
+            <Decks decks={decks} />
+          </Route>
+          <Route exact path="/decks/:deckId/study">
+            <Study />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
+    </>
+  );
 }
+
 
 export default Layout;
