@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { readDeck } from "../utils/api";
+import BreadCrumb from "../BreadCrumb";
 
+// WIP
 // There is some refactoring to do here.
 // A card component could be extracted from this component.
 function Study() {
@@ -36,10 +38,12 @@ function Study() {
 
   return (
     <>
+      <BreadCrumb />
+      <h2>Study: {deck.name}</h2>
+
       <section className="card">
         {deck.cards && (
           <>
-            <h2>Study: {deck.name}</h2>
             <h3>Card {cardNumber} of {deck.cards.length}</h3>
             <p>{flipped ? deck.cards[cardNumber - 1].back : deck.cards[cardNumber - 1].front}</p>
           </>

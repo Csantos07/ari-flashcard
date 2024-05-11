@@ -8,12 +8,14 @@ function Deck({ deck }) {
       <section className="card">
         <h4>{deck.name}</h4>
         <p>{deck.description}</p>
-        <button className="bg-secondary">View</button>
-        <Link className="bg-primary text-white" to={`decks/${deck.id}/study`}>
+
+        <Link className="btn bg-secondary text-white" to={`decks/${deck.id}`}>
+          View
+        </Link>
+        <Link className="btn bg-primary text-white" to={`decks/${deck.id}/study`}>
           Study
         </Link>
-
-        <button className="bg-danger">Delete</button>
+        <button className="btn bg-danger">Delete</button>
       </section >
     </>
   );

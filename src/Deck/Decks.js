@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Deck from "./Deck";
+import Deck from ".";
 
 function Decks({ decks }) {
 
