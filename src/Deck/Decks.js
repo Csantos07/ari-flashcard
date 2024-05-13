@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Deck from ".";
 
-function Decks({ decks }) {
+function Decks({ decks, removeDeck }) {
 
   return (
     <>
       {decks && decks.map(deck => {
         return (
-          <Deck deck={deck} />
+          <Deck deck={deck} removeDeck={removeDeck} />
         );
       })}
     </>

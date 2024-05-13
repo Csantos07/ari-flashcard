@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+// import { deleteDeck } from "../utils/api";
 
-function Deck({ deck }) {
+function Deck({ deck, removeDeck }) {
+
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you want to delete this deck?")) {
+      removeDeck(deck.id);
+    }
+  }
 
   return (
     <>
@@ -15,7 +21,7 @@ function Deck({ deck }) {
         <Link className="btn bg-primary text-white" to={`decks/${deck.id}/study`}>
           Study
         </Link>
-        <button className="btn bg-danger">Delete</button>
+        <button className="btn bg-danger" onClick={handleDelete}>Delete</button>
       </section >
     </>
   );

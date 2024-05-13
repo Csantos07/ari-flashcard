@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
-import { listDecks } from "../utils/api";
+import { deleteDeck, listDecks } from "../utils/api";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import Study from "../Study";
 import ViewDeck from "../Deck/ViewDeck";
@@ -10,9 +10,6 @@ import Home from "../Home";
 
 function Layout() {
   const [decks, setDecks] = useState([]);
-  const addDeck = (newDeck) => {
-    setDecks([...decks, newDeck]);
-  };
 
   useEffect(() => {
     async function loadDeck() {
@@ -23,6 +20,16 @@ function Layout() {
 
   }, [])
 
+
+  function addDeck(newDeck) { // Add a new deck to the list of decks
+    setDecks([...decks, newDeck]);
+  }
+
+  function removeDeck(deckId) {
+    setDecks(decks.filter((deck) => deck.id !== deckId));
+    deleteDeck(deckId);
+  }
+
   return (
     <>
       <Header />
@@ -30,7 +37,7 @@ function Layout() {
         {/* TODO: Implement the screen starting here */}
         <Switch>
           <Route exact path="/">
-            <Home decks={decks} />
+            <Home decks={decks} removeDeck={removeDeck} />
           </Route>
           <Route exact path="/decks/new">
             <CreateDeck addDeck={addDeck} />
@@ -39,7 +46,7 @@ function Layout() {
             <Study />
           </Route>
           <Route exact path="/decks/:deckId/">
-            <ViewDeck />
+            <ViewDeck removeDeck={removeDeck} />
           </Route>
           <Route>
             <NotFound />
