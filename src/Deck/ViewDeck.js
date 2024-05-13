@@ -38,8 +38,8 @@ function ViewDeck({ removeDeck }) {
       <Link className="btn bg-primary text-white" to={`/decks/${deck.id}/study`}>
         Study
       </Link>
-      <Link className="btn bg-primary text-white" to="#">
-        Add Cards
+      <Link className="btn bg-primary text-white" to={`/decks/${deck.id}/cards/new`}>
+        Add Card
       </Link>
       <button className="btn bg-danger" onClick={handleDelete}>Delete</button>
 

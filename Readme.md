@@ -1,5 +1,3 @@
--
-
 * Create Cards within the deck?
   - Is there more than one way to create a card or maybe even decks?
   - The Create Card button should be on the ViewDeck.. flow.

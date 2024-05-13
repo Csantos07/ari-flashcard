@@ -9,6 +9,11 @@
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
+    },
+    {
+      "name": "The Psychology of Money - Morgan Housel",
+      "description": "Think Differently About Money",
+      "id": 3
     }
   ],
   "cards": [
@@ -47,6 +52,24 @@
       "back": "To navigate the user to a different route",
       "deckId": 2,
       "id": 6
+    },
+    {
+      "front": "How can we use useParams",
+      "back": "when getting a parameter from the url",
+      "deckId": 2,
+      "id": 7
+    },
+    {
+      "front": "How can we use useParams",
+      "back": "when getting a parameter from the url",
+      "deckId": 2,
+      "id": 8
+    },
+    {
+      "front": "How can we use useParams",
+      "back": "when getting a parameter from the url",
+      "deckId": 2,
+      "id": 9
     }
   ]
 }

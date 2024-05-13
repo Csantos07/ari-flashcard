@@ -7,6 +7,7 @@ import Study from "../Study";
 import ViewDeck from "../Deck/ViewDeck";
 import CreateDeck from "../Deck/CreateDeck";
 import Home from "../Home";
+import AddCard from "../Card/AddCard";
 
 function Layout() {
   const [decks, setDecks] = useState([]);
@@ -47,6 +48,9 @@ function Layout() {
           </Route>
           <Route exact path="/decks/:deckId/">
             <ViewDeck removeDeck={removeDeck} />
+          </Route>
+          <Route exact path="/decks/:deckId/cards/new">
+            <AddCard />
           </Route>
           <Route>
             <NotFound />
