@@ -70,6 +70,12 @@
       "back": "when getting a parameter from the url",
       "deckId": 2,
       "id": 9
+    },
+    {
+      "front": "What is the purpose of React Fragment Tags?",
+      "back": "to be edited",
+      "deckId": 1,
+      "id": 10
     }
   ]
 }

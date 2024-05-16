@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { readDeck } from "../utils/api";
 import { Link, useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import BreadCrumb from "../BreadCrumb";
+import Cards from "../Card/Cards";
+import Deck from ".";
 
 function ViewDeck({ removeDeck }) {
   const { deckId } = useParams();
@@ -22,8 +24,10 @@ function ViewDeck({ removeDeck }) {
       removeDeck(deck.id);
     }
     history.push("/");
-
   }
+
+  // Would I want to create another delete function here?
+  // If i need to delete a card and have the rest of the cards rerender how do i do that
 
   return (
     <>
@@ -35,29 +39,22 @@ function ViewDeck({ removeDeck }) {
       <Link className="btn bg-secondary text-white" to="#">
         Edit
       </Link>
+
       <Link className="btn bg-primary text-white" to={`/decks/${deck.id}/study`}>
         Study
       </Link>
+
       <Link className="btn bg-primary text-white" to={`/decks/${deck.id}/cards/new`}>
         Add Card
       </Link>
+
       <button className="btn bg-danger" onClick={handleDelete}>Delete</button>
 
-      <section>
-        {deck.cards && (
-          <>
-            <h3>Cards</h3>
-            {deck.cards.map((card) => (
-              <article className="card" key={card.id}>
-                <p>Front: {card.front}</p>
-                <p>Back: {card.back}</p>
-                <button className="btn bg-secondary">Edit</button>
-                <button className="btn bg-danger">Delete</button>
-              </article>
-            ))}
-          </>
-        )}
-      </section >
+      <Cards cards={deck.cards} />
+
+
+      {/* What I'm pondering is how do I pull out the Cards/Card components */}
+      {/* Cards */}
     </>
   );
 }
