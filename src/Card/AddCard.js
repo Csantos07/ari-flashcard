@@ -18,7 +18,7 @@ function AddCard() {
     }
     loadDeck();
 
-  });
+  }, [deckId]);
 
   function handleChange({ target }) {
     setFormData({
@@ -30,6 +30,7 @@ function AddCard() {
   function handleSubmit(event) {
     event.preventDefault()
     createCard(deckId, formData);
+    setFormData(initialFormState);
     // Handle form submission
   }
 

@@ -14,6 +14,11 @@
       "name": "The Psychology of Money - Morgan Housel",
       "description": "Think Differently About Money",
       "id": 3
+    },
+    {
+      "name": "Tagalog",
+      "description": "Good Tagalog Phrases",
+      "id": 4
     }
   ],
   "cards": [
@@ -76,6 +81,24 @@
       "back": "to be edited",
       "deckId": 1,
       "id": 10
+    },
+    {
+      "front": "Kamusta Ka",
+      "back": "How are you",
+      "deckId": 4,
+      "id": 11
+    },
+    {
+      "front": "Ano ang balita?",
+      "back": "What's the news?\n",
+      "deckId": 4,
+      "id": 12
+    },
+    {
+      "front": "Heto lang",
+      "back": "Just Here/I'm fine",
+      "deckId": 4,
+      "id": 13
     }
   ]
 }

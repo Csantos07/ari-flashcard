@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { readDeck } from "../utils/api";
+import { deleteCard, readDeck } from "../utils/api";
 import { Link, useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import BreadCrumb from "../BreadCrumb";
 import Cards from "../Card/Cards";
-import Deck from ".";
 
 function ViewDeck({ removeDeck }) {
   const { deckId } = useParams();
   const [deck, setDeck] = useState("");
   const history = useHistory();
+  const [cards, setCards] = useState([]);
+
 
   useEffect(() => {
     async function loadDeck() {
       const response = await readDeck(deckId);
       setDeck(response);
+      setCards(response.cards);
 
     }
     loadDeck();
@@ -24,6 +26,11 @@ function ViewDeck({ removeDeck }) {
       removeDeck(deck.id);
     }
     history.push("/");
+  }
+
+  function removeCard(cardId) {
+    setCards(cards.filter((card) => card.id !== cardId));
+    deleteCard(cardId);
   }
 
   // Would I want to create another delete function here?
@@ -50,7 +57,7 @@ function ViewDeck({ removeDeck }) {
 
       <button className="btn bg-danger" onClick={handleDelete}>Delete</button>
 
-      <Cards cards={deck.cards} />
+      <Cards cards={cards} removeCard={removeCard} />
 
 
       {/* What I'm pondering is how do I pull out the Cards/Card components */}

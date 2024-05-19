@@ -1,15 +1,14 @@
-* Delete a card
-  - Will need to continue the prop drilling aproach
-  - This should continue happening in the view deck workflow...
-  - we will want the cards to rerender ... do we need to create state for card?
-  - Will we want the deleteCard to happen in layout or viewDeck
-
-- Reusable components for the forms?
 - Edit/update deck and cards?
+- Restrictions for study
+  - must have more than 3 cards
+- Reusable components for the forms?
 
 ---
 
 ## At this point
+
+- [x] Delete a card
+
 - [x] Created components for Cards and Card... refactored ViewDeck to use these components
 
 - [x] We can Create Cards within the deck

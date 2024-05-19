@@ -46,7 +46,7 @@ function BreadCrumb() {
             </Link>
           </li>
           {crumbs.map((crumb, index) => (
-            <li className="breadcrumb-item">
+            <li key={index} className="breadcrumb-item">
 
               {/* When I click on deck name in the bread crumb
                     I should navigate to the view page of the deck
