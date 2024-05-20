@@ -8,6 +8,7 @@ import ViewDeck from "../Deck/ViewDeck";
 import CreateDeck from "../Deck/CreateDeck";
 import Home from "../Home";
 import AddCard from "../Card/AddCard";
+import EditDeck from "../Deck/EditDeck";
 
 function Layout() {
   const [decks, setDecks] = useState([]);
@@ -25,6 +26,11 @@ function Layout() {
   function addDeck(newDeck) { // Add a new deck to the list of decks
     setDecks([...decks, newDeck]);
   }
+
+  function editDeck(updatedDeck) {
+    setDecks(decks.map((deck) => (deck.id === updatedDeck.id ? updatedDeck : deck)));
+  }
+
 
   function removeDeck(deckId) {
     setDecks(decks.filter((deck) => deck.id !== deckId));
@@ -48,6 +54,9 @@ function Layout() {
           </Route>
           <Route exact path="/decks/:deckId/">
             <ViewDeck removeDeck={removeDeck} />
+          </Route>
+          <Route exact path="/decks/:deckId/edit">
+            <EditDeck editDeck={editDeck} />
           </Route>
           <Route exact path="/decks/:deckId/cards/new">
             <AddCard />

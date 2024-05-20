@@ -33,9 +33,6 @@ function ViewDeck({ removeDeck }) {
     deleteCard(cardId);
   }
 
-  // Would I want to create another delete function here?
-  // If i need to delete a card and have the rest of the cards rerender how do i do that
-
   return (
     <>
       <BreadCrumb />
@@ -43,9 +40,9 @@ function ViewDeck({ removeDeck }) {
       <h2>{deck.name}</h2>
       <p>{deck.description}</p>
 
-      <Link className="btn bg-secondary text-white" to="#">
+      <Link className="btn bg-secondary text-white" to={`/decks/${deck.id}/edit`}>
         Edit
-      </Link>
+      </Link >
 
       <Link className="btn bg-primary text-white" to={`/decks/${deck.id}/study`}>
         Study
@@ -58,10 +55,6 @@ function ViewDeck({ removeDeck }) {
       <button className="btn bg-danger" onClick={handleDelete}>Delete</button>
 
       <Cards cards={cards} removeCard={removeCard} />
-
-
-      {/* What I'm pondering is how do I pull out the Cards/Card components */}
-      {/* Cards */}
     </>
   );
 }

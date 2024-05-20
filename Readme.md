@@ -1,11 +1,16 @@
-- Edit/update deck and cards?
+* Edit Card
+  - Reusable form for Edit and Create
+
 - Restrictions for study
   - must have more than 3 cards
-- Reusable components for the forms?
 
 ---
 
 ## At this point
+
+- [x] Reusable components for deck
+
+- [x] Edit/update deck
 
 - [x] Delete a card
 
