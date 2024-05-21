@@ -19,7 +19,6 @@ function DeckForm({ deck, submitDeck, routeTo }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await submitDeck(formData);
-    console.log({ routeTo });
     history.push(routeTo);
   };
 

@@ -1,12 +1,12 @@
-* Edit Card
-  - Reusable form for Edit and Create
-
-- Restrictions for study
+* Restrictions for study
   - must have more than 3 cards
 
 ---
 
 ## At this point
+
+- [x] Edit Card
+  - [ ] Reusable form for Edit and Create
 
 - [x] Reusable components for deck
 

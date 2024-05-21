@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Card({ card, removeCard }) {
   const handleDelete = () => {
@@ -13,7 +14,9 @@ function Card({ card, removeCard }) {
       <article className="card">
         <p>Front: {card.front}</p>
         <p>Back: {card.back}</p>
-        <button className="btn bg-secondary">Edit</button>
+        <Link className="btn bg-secondary" to={`/decks/${card.deckId}/cards/${card.id}/edit`}>
+          Edit
+        </Link>
         <button className="btn bg-danger" onClick={handleDelete}>Delete</button>
         {/* On clicking the delete above we should remove a card but...
             will that rerender what i want.. if i want it to rerender the view deck */}

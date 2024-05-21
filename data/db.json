@@ -78,7 +78,7 @@
     },
     {
       "front": "What is the purpose of React Fragment Tags?",
-      "back": "to be edited",
+      "back": "The purpose of Fragment tags (<React.Fragment> or its shorthand <></>) is to group multiple elements without adding an extra node to the DOM.",
       "deckId": 1,
       "id": 10
     },

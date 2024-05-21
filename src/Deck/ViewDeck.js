@@ -28,9 +28,9 @@ function ViewDeck({ removeDeck }) {
     history.push("/");
   }
 
-  function removeCard(cardId) {
+  async function removeCard(cardId) {
+    await deleteCard(cardId);
     setCards(cards.filter((card) => card.id !== cardId));
-    deleteCard(cardId);
   }
 
   return (
