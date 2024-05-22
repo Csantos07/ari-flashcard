@@ -1,12 +1,14 @@
-* Restrictions for study
-  - must have more than 3 cards
+* Finish Bread Crumb
 
 ---
 
 ## At this point
 
+- [x] Restrictions for study
+  - must have more than 3 cards
+
 - [x] Edit Card
-  - [ ] Reusable form for Edit and Create
+  - [x] Reusable form for Edit and Create
 
 - [x] Reusable components for deck
 
