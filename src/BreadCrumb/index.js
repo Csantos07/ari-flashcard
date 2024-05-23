@@ -31,9 +31,9 @@ function BreadCrumb() {
     setCrumbs(path);
   }, [deck]);
 
-  function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
+  // function capitalize(str) {
+  //   return str.charAt(0).toUpperCase() + str.slice(1);
+  // }
 
   return (
     <>

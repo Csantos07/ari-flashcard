@@ -3,6 +3,7 @@ import { deleteCard, readDeck } from "../utils/api";
 import { Link, useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import BreadCrumb from "../BreadCrumb";
 import Cards from "../Card/Cards";
+import BreadCrumbTwo from "../BreadCrumbTwo";
 
 function ViewDeck({ removeDeck }) {
   const { deckId } = useParams();
@@ -35,7 +36,7 @@ function ViewDeck({ removeDeck }) {
 
   return (
     <>
-      <BreadCrumb />
+      <BreadCrumbTwo deck={deck} />
 
       <h2>{deck.name}</h2>
       <p>{deck.description}</p>

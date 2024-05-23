@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { createCard, readDeck } from "../utils/api";
 import CardForm from "./CardForm";
+import BreadCrumb from "../BreadCrumb";
+import BreadCrumbTwo from "../BreadCrumbTwo";
 
 
 function AddCard() {
@@ -28,6 +30,7 @@ function AddCard() {
 
   return (
     <>
+      <BreadCrumbTwo deck={deck} />
       <h2>{deck.name}: Add Card</h2>
 
       <CardForm formData={formData} submitCard={handleSubmit} routeTo={`/decks/${deckId}`} />

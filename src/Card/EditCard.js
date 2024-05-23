@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardForm from './CardForm';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { readCard, readDeck, updateCard } from '../utils/api';
+import BreadCrumbTwo from '../BreadCrumbTwo';
 
 function EditCard() {
   const { cardId } = useParams();
@@ -31,6 +32,7 @@ function EditCard() {
 
   return (
     <>
+      <BreadCrumbTwo deck={deck} />
       <h2>{deck.name}: Edit Card</h2>
       <CardForm card={card} submitCard={handleSubmit} routeTo={`/decks/${card.deckId}`} />
     </>

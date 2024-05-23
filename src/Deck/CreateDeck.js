@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { createDeck } from "../utils/api";
 import { useHistory } from "react-router-dom";
 import DeckForm from "./DeckForm";
+import BreadCrumbTwo from "../BreadCrumbTwo";
 
 function CreateDeck({ addDeck }) {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ function CreateDeck({ addDeck }) {
   return (
     <>
       {/* <BreadCrumb /> */}
+      <BreadCrumbTwo />
       <h2>Create Deck</h2>
 
       <DeckForm deck={formData} submitDeck={handleSubmit} routeTo={routeTo} />

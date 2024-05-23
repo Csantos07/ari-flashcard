@@ -4,6 +4,9 @@
 
 ## At this point
 
+- [x] Working version of the Bread Crumb
+  - [ ] Consider refactoring. Making more react like. Maybe create utility functions for breadcrumbs
+
 - [x] Restrictions for study
   - must have more than 3 cards
 

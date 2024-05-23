@@ -4,6 +4,7 @@ import { readDeck } from "../utils/api";
 import BreadCrumb from "../BreadCrumb";
 import StudyCards from "./StudyCards";
 import NotEnoughCards from "./NotEnoughCards";
+import BreadCrumbTwo from "../BreadCrumbTwo";
 
 function Study() {
 
@@ -28,7 +29,8 @@ function Study() {
 
   return (
     <>
-      <BreadCrumb />
+      {/* <BreadCrumb /> */}
+      <BreadCrumbTwo deck={deck} />
       <h2>Study: {deck.name}</h2>
       {deck.cards.length < 3 ? (
         <NotEnoughCards deck={deck} />
